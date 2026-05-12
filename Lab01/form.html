@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Форма реєстрації</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<form action="submit_form.php" method="post">
+    <fieldset>
+    <h1>Контактна форма бібліотеки <br></h1>
+    <label type="text" for = "Name" name="Name"> <p line-height="1.6"> ПІБ: </label>
+    <input type="text" id = "Name" name="Name" required><br></p>
+    <label type="text" for = "Email" name="Email"> <p line-height="1.6"> Електронна пошта: </label>
+    <input type="email" id = "Email" name="Email" required><br></p>
+    <label type="text" for = "Number" name="Number">  Номер читацького квитка: </label>
+    <input type="number" id = "Number" name="Number" required><br>
+    <label type="text" for = "Topic" name="Topic"> <p line-height="1.6"> Тема звернення: </label>
+    <select id = "Topic" name="Topic" required>
+        <option value="BookRequest">Запит на отримання книги</option>
+        <option value="Membership">Запит на приєднання до членства бібліотеки</option>
+        <option value="ReturnRequest">Запит на повернення книги</option>
+        <option value="Report"> Повідомлення про проблему або скарга</option>
+        <option value="Other">Інше</option>
+    </select><br></p>
+    <label type="text" for = "Filling" name="Filling"> <p line-height="1.6"> Текст звернення: </label>
+        <input type="text" id = "Filling" name="Filling" style="width: 100%; max-width: 400px; box-sizing: border-box;" required> <br></p>
+    <label type="text" for = "AnswerType" name="AnswerType"> <p line-height="1.6"> Бажаний спосіб отримання відповіді: <br></label>
+    <input type="radio" id = "AnswerTypeR" name="AnswerTypeR" value="Email" required> Електронна пошта <br>
+    <input type="radio" id = "AnswerTypeR" name="AnswerTypeR" value ="Phone" required> Телефон 
+    <input type="tel" id="TelNumber" name="TelNumber"><br>
+    <input type="radio" id="AnswerTypeR" name="AnswerTypeR" for="Messenger" value ="Messenger" required> Надіслати месенджером 
+    <select id="Messenger" name="Messenger" required>
+        <option value="Telegram">Telegram</option>
+        <option value="Viber">Viber</option>
+        <option value="WhatsApp">WhatsApp</option>
+    </select> <br>
+    <br></p>
+    <button type="submit">Відправити</button>
+    </fieldset>
+</form>
+</body>
+</html>
