@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="uk">
+    <meta charset="UTF-8">
+    <title>My Page</title>
+
+
+    <link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+<body>
+<main class="container">
+    <section class="card main-panel">
+        <div class="add-item">
+            <input type="text" placeholder="Назва товару" aria-label="Введіть назву товару">
+            <button class="btn-add" data-tooltip="Додати у список">Додати</button>
+        </div>
+
+        <div class="items-list">
+            <div class="row">
+                <span class="item-name">Помідори</span>
+                <div class="actions">
+                    <span class="count-badge">2</span>
+                    <button class="btn-status grey" data-tooltip="Статус товару">Не куплено</button>
+                </div>
+            </div>
+
+            <div class="row">
+                <span class="item-name">Печиво</span>
+                <div class="actions">
+                    <button class="btn-round red" data-tooltip="Зменшити">-</button>
+                    <span class="count-badge">2</span>
+                    <button class="btn-round green" data-tooltip="Збільшити">+</button>
+                    <button class="btn-status grey" data-tooltip="Позначити як куплене">Куплено</button>
+                    <button class="btn-round red icon" data-tooltip="Видалити">✕</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="card side-panel">
+        <div class="stats-group">
+            <h3>Залишилося</h3>
+            <div class="tags">
+                <span class="tag">Печиво <span class="tag-count">2</span></span>
+                <span class="tag">Сир <span class="tag-count">1</span></span>
+            </div>
+        </div>
+        <hr>
+        <div class="stats-group">
+            <h3>Куплено</h3>
+            <div class="tags bought">
+                <span class="tag"><del>Помідори</del> <span class="tag-count">2</span></span>
+            </div>
+        </div>
+    </section>
+</main>
+
+    <div class="badge">
+    <div class="badge-title">Buy List</div>
+    <div class="badge-author">Created by: Kondratenko Artem</div>
+</div>
+</div>
+</body>
+</html>
