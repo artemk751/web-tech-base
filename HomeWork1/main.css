@@ -36,6 +36,19 @@ body {
     border-bottom: 1px solid #eee;
 }
 
+.add-item {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.add-item input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
 .btn-add {
     background-color: #2366d2;
     color: white;
@@ -57,6 +70,12 @@ body {
     margin: 0 5px;
 }
 
+.btn-round:disabled {
+    background-color: #ccc !important;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
 .red { background-color: #db4437;     box-shadow: 0 2px 5px rgba(0,0,0,0.2);   }
 .green { background-color: #4CAF50;     box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
 .grey { background-color: #f1f1f1; color: #555; border: 1px solid #ccc; box-shadow: 0 2px 5px rgba(0,0,0,0.2);}
@@ -66,6 +85,9 @@ body {
     padding: 5px 12px;
     border-radius: 4px;
     margin: 0 10px;
+    display: inline-block;
+    min-width: 30px;
+    text-align: center;
 }
 
 .tag {
@@ -93,41 +115,8 @@ body {
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-.stats-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-.product-item {
-    background-color: #e9e9e9;
-    display: inline-flex;
-    align-items: center;
-    padding: 6px 12px;
-    border-radius: 6px;
-    font-size: 14px;
-    font-weight: bold;
-    color: #555;
-    box-shadow: inset 0 -2px 0 rgba(0,0,0,0.1);
-}
-
-.amount {
-    background-color: #f37021;
-    color: white;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 8px;
-    font-size: 11px;
-}
-
-.bought .product-item {
-    text-decoration: line-through;
-    opacity: 0.7;
+.bought .tag del {
+    color: #888;
 }
 
 .badge {
@@ -136,7 +125,7 @@ body {
     padding: 15px 25px;
     border-radius: 15px 15px 0 0;
     position: fixed;
-    bottom: -45px;
+    bottom: -40px;
     left: 20px;
     cursor: pointer;
     font-family: sans-serif;
@@ -152,7 +141,7 @@ body {
 }
 
 .badge:hover {
-    transform: translateY(-45px); 
+    transform: translateY(-40px); 
     background-color: #4a00e0; 
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
@@ -203,6 +192,7 @@ body {
     pointer-events: none;
     transition: all 0.3s ease;
     margin-bottom: 10px;
+    z-index: 10;
 }
 
 [data-tooltip]:hover::after {
@@ -213,4 +203,26 @@ body {
 button:focus, input:focus {
     outline: 2px solid #6A0DAD;
     outline-offset: 2px;
+}
+
+.item-name {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.item-name-input {
+    padding: 4px 8px;
+    font-size: 16px;
+    border: 1px solid #6A0DAD;
+    border-radius: 4px;
+}
+
+.item-name.is-bought {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
 }
